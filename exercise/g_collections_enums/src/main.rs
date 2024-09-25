@@ -24,10 +24,10 @@ impl Shot {
         // - return 2 points if `self` is a `Shot::Hit(x)` where x < 3.0
         // - return 1 point if `self` is a `Shot::Hit(x)` where x >= 3.0
         // - return 0 points if `self` is a Miss
-        match &self {
+        match self {
             Self::Bullseye => 5,
             Self::Hit(x) => {
-                if *x < 3.0 {
+                if x < 3.0 {
                     2
                 } else {
                     1
